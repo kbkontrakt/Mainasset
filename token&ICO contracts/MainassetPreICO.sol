@@ -46,11 +46,14 @@ contract MainassetPreICO {
 
 
   function MainassetPreICO(address _token, address _wallet) {
+    require(_token != 0x0);
+    require(_wallet != 0x0);
 
     // address of MasToken
-    token = StandardMintableBurnableToken(0x66b44b312028a647df2a4e1a94ece295660ad052);
+    token = StandardMintableBurnableToken(_token);
     
-    wallet = 0xd34B16dE8B6122b62bae710F6Dc431f16FC4ccBB;
+    // address of wallet
+    wallet = _wallet;
     
     owner = msg.sender;
 
