@@ -74,7 +74,7 @@ contract MainassetPreICO {
 
     /// minimum goal
 
-    goal = 750 ether;
+    goal = 500 ether;
 
   }
   
